@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Index Page
+          About Page
         </h1>
 
         <p className={styles.description}>
