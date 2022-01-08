@@ -17,6 +17,7 @@ module.exports = {
 	],
 	rules: {
 		"no-var": "error",
+		"react/prop-types": "off",
 	},
 	settings: {
 		react: {
