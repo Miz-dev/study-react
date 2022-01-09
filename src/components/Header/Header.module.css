@@ -8,6 +8,8 @@
 }
 
 .anchor {
+	color: #000;
+	text-decoration: none;
 	display: inline-block;
 	padding: 8px 24px;
 	font-size: 1.2rem;
