@@ -19,6 +19,7 @@ module.exports = {
 	rules: {
 		"no-var": "error",
 		"react/prop-types": "off",
+		"jsx-a11y/anchor-is-valid": "off",
 	},
 	settings: {
 		react: {
