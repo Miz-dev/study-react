@@ -1,26 +1,25 @@
-import Link from "next/link";
 import React from "react";
-import { useComments } from "src/hooks/useComments";
+import Link from "next/link";
+import { useComments } from "src/hooks/useFetchArray";
 
 export const CommentsComponents = () => {
 	const { data, error, isLoading, isEmpty } = useComments();
-
 	if (isLoading) {
-		return <p>Loading...</p>;
+		return <div>Loading...</div>;
 	}
 	if (error) {
-		return <p>{error.message}</p>;
+		return <div>{error.message}</div>;
 	}
 	if (isEmpty) {
-		return <p>No comments found.</p>;
+		return <div>No comments found.</div>;
 	}
 	return (
 		<ol>
-			{data.map((comments) => {
+			{data.map((data) => {
 				return (
-					<li key={comments.id}>
-						<Link href={`/comments/${comments.id}`}>
-							<a>{comments.body}</a>
+					<li key={data.id}>
+						<Link href={`/comments/${data.id}`}>
+							<a>{data.body}</a>
 						</Link>
 					</li>
 				);
