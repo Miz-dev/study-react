@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import { CommentsComponent } from "src/components/Comments";
 import { Header } from "src/components/Header";
-import { CommentsComponents } from "src/components/Comments";
 
 const Comments = () => {
 	return (
@@ -10,7 +10,7 @@ const Comments = () => {
 				<title>Comments Page</title>
 			</Head>
 			<Header />
-			<CommentsComponents />
+			<CommentsComponent />
 		</div>
 	);
 };

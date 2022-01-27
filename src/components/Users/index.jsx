@@ -1,19 +1,22 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 import { useUsers } from "src/hooks/useFetchArray";
 
 export const UsersComponent = () => {
 	const { data, error, isLoading, isEmpty } = useUsers();
 
 	if (isLoading) {
-		return <div>Loading...</div>;
+		return <p>Loading...</p>;
 	}
+
 	if (error) {
-		return <div>{error.message}</div>;
+		return <p>{error.message}</p>;
 	}
+
 	if (isEmpty) {
-		return <div>No users found.</div>;
+		return <p>No users found.</p>;
 	}
+
 	return (
 		<ol>
 			{data.map((user) => {

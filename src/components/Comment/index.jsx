@@ -1,12 +1,13 @@
 import React from "react";
-import { useComments } from "src/hooks/useFetchArray";
+import { useComment } from "src/hooks/useComent";
 
 export const CommentComponent = () => {
-	const { data, error, isLoading } = useComments();
+	const { data, error, isLoading } = useComment();
 
 	if (isLoading) {
 		return <div>Loading...</div>;
 	}
+
 	if (error) {
 		return <div>{error.message}</div>;
 	}
