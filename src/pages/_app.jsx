@@ -2,7 +2,6 @@ import "tailwindcss/tailwind.css";
 import Head from "next/head";
 import React from "react";
 import { Layout } from "src/components/Layout";
-// import "src/styles/globals.css";
 import { SWRConfig } from "swr";
 
 const fetcher = async (...args) => {
