@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Header } from "src/components/Header";
-import { UsersComponent } from "src/components/Users";
+import { UsersList } from "src/components/User/UsersList";
 import { API_URL } from "src/utils/const";
 import { SWRConfig } from "swr";
 
@@ -27,8 +26,7 @@ const Users = (props) => {
 				<title>Users Page</title>
 			</Head>
 			<SWRConfig value={{ fallback }}>
-				<Header />
-				<UsersComponent />
+				<UsersList />
 			</SWRConfig>
 		</div>
 	);

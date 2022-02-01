@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { CommentsComponent } from "src/components/Comments";
-import { Header } from "src/components/Header";
+import { CommentsList } from "src/components/Comment/CommentsList";
 import { API_URL } from "src/utils/const";
 import { SWRConfig } from "swr";
 
@@ -28,8 +27,7 @@ const Comments = (props) => {
 				<title>Comments Page</title>
 			</Head>
 			<SWRConfig value={{ fallback }}>
-				<Header />
-				<CommentsComponent />
+				<CommentsList />
 			</SWRConfig>
 		</div>
 	);

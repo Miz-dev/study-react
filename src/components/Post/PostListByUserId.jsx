@@ -1,16 +1,21 @@
 import React from "react";
 import Link from "next/link";
-import { usePosts } from "src/hooks/useFetchArray";
+import { useFetchArray } from "src/hooks/useFetchArray";
+import { API_URL } from "src/utils/const";
 
-export const Posts = () => {
-	const { data, error, isLoading, isEmpty } = usePosts();
+export const PostListByUserId = (props) => {
+	const { data, error, isLoading, isEmpty } = useFetchArray(
+		props.id ? `${API_URL}/users/${props.id}/posts` : null
+	);
 
 	if (isLoading) {
-		return <div>Loading...</div>;
+		return <div>ローディング中</div>;
 	}
+
 	if (error) {
 		return <div>{error.message}</div>;
 	}
+
 	if (isEmpty) {
 		return <div>データは空です</div>;
 	}
